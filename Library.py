@@ -1,10 +1,11 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
 def plotgrid(map_func, xlim=(-3, 3), ylim=(-3, 3), grid_size=21):
     """
     Plots a regular grid and its deformation by map_func.
     """
+    import matplotlib.pyplot as plt
+
     # Create the original grid
     x = np.linspace(xlim[0], xlim[1], grid_size)
     y = np.linspace(ylim[0], ylim[1], grid_size)
