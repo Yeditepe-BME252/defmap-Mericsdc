@@ -50,13 +50,16 @@ def plotgrid(map_func, xlim=(-3, 3), ylim=(-3, 3), grid_size=21):
     plt.savefig('grid.png', dpi=150, bbox_inches='tight')
     plt.show()
 
-## Define a deformation functions
-def case_26(x, y):
-    return x + 0.02, y + 0.04
+## Define a deformation function
+def case_10(x, y):
+    A = 0.15
+    L = 3
+    h = 3
+    return x + A * np.sin(2 * np.pi * y / L) * np.exp(-x / h), y
 
 ## how to run
 ## start a python console
-# from Library import plotgrid, case_26
+# from Library import plotgrid, case_10
 
 ## to generate the plot
-# plotgrid(case_26)
+# plotgrid(case_10)
